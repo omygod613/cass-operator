@@ -31,7 +31,7 @@ func newServiceForCassandraDatacenter(dc *api.CassandraDatacenter) *corev1.Servi
 		namedServicePort("native", nativePort, nativePort),
 		namedServicePort("tls-native", 9142, 9142),
 		namedServicePort("mgmt-api", 8080, 8080),
-		namedServicePort("prometheus", 9103, 9103),
+		namedServicePort("http-prometheus", 9103, 9103),
 		namedServicePort("thrift", 9160, 9160),
 	}
 
@@ -256,7 +256,7 @@ func newAllPodsServiceForCassandraDatacenter(dc *api.CassandraDatacenter) *corev
 			Name: "mgmt-api", Port: 8080, TargetPort: intstr.FromInt(8080),
 		},
 		{
-			Name: "prometheus", Port: 9103, TargetPort: intstr.FromInt(9103),
+			Name: "http-prometheus", Port: 9103, TargetPort: intstr.FromInt(9103),
 		},
 	}
 

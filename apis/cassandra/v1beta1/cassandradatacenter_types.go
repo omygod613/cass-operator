@@ -728,7 +728,7 @@ func (dc *CassandraDatacenter) GetContainerPorts() ([]corev1.ContainerPort, erro
 		namedPort("tls-internode", 7001),
 		namedPort("jmx", 7199),
 		namedPort("mgmt-api-http", 8080),
-		namedPort("prometheus", 9103),
+		namedPort("http-prometheus", 9103),
 		namedPort("thrift", 9160),
 	}
 
